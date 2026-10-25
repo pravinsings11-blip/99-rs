@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Free – Get Your Professional Website for ₹99</title>
+<meta name="description" content="Get a professionally built website for a one-time payment of ₹99. Secure Razorpay checkout with UPI, cards and net banking.">
+<meta property="og:title" content="Web Free – Professional Website for ₹99">
+<meta property="og:description" content="One-time payment of ₹99. No subscription.">
+<style>
+:root{--ink:#0f172a;--mut:#64748b;--acc:#4f46e5;--acc2:#7c3aed;--line:#e2e8f0;--soft:#f8fafc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.w{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto;padding:14px 20px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px}
+.logo i{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:inline-block}
+nav .links a{color:var(--ink);text-decoration:none;margin-right:18px;font-size:15px}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:13px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:#4338ca}
+.btn:disabled{opacity:.7}
+.btn.white{background:#fff;color:var(--acc)}
+.hero{text-align:center;padding:64px 0 50px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:800}
+.hero h1{font-size:clamp(32px,7vw,60px);line-height:1.1;margin:12px 0 16px;letter-spacing:-.02em}
+.hero p{max-width:580px;margin:0 auto 26px;color:var(--mut);font-size:18px}
+.note{font-size:13px;color:var(--mut);margin-top:12px}
+section{padding:54px 0}
+.soft{background:var(--soft)}
+h2{font-size:clamp(26px,4.5vw,36px);margin:0 0 10px;text-align:center;letter-spacing:-.01em}
+.sub{text-align:center;color:var(--mut);max-width:560px;margin:0 auto 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.tag{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--acc);background:#eef2ff;border-radius:999px;padding:3px 10px}
+.num{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+.plan{max-width:440px;margin:0 auto;text-align:center;border:2px solid var(--acc);border-radius:24px;padding:34px;background:#fff;box-shadow:0 20px 50px rgba(79,70,229,.15)}
+.price{font-size:56px;font-weight:800;line-height:1}
+.price small{font-size:15px;color:var(--mut);font-weight:600}
+.plan ul{text-align:left;color:#334155;padding-left:20px;margin:20px 0 24px}
+.plan li{margin-bottom:6px}
+details{border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:0 auto 12px;max-width:720px;background:#fff}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--mut);margin:8px 0 0}
+.cta{max-width:900px;margin:0 auto;text-align:center;color:#fff;border-radius:26px;padding:50px 24px;background:linear-gradient(135deg,var(--acc),#6d28d9)}
+.cta h2{color:#fff}
+.cta p{color:#e0e7ff;margin:0 0 22px}
+a.ct{color:var(--acc);font-weight:700}
+footer{border-top:1px solid var(--line);padding:30px 20px;text-align:center;color:var(--mut);font-size:13px}
+footer p{margin:6px auto;max-width:700px}
+#thanks{display:none;padding:70px 20px;text-align:center}
+#thanks .box{max-width:520px;margin:0 auto;border:2px solid var(--acc);border-radius:22px;padding:34px;box-shadow:0 20px 50px rgba(79,70,229,.15)}
+#thanks h2{margin-bottom:10px}
+#thanks p{color:var(--mut)}
+#thanks code{background:var(--soft);padding:3px 8px;border-radius:6px;color:var(--ink);word-break:break-all}
+body.paid #thanks{display:block}
+body.paid .main{display:none}
+@media (max-width:560px){nav .links a{display:none}.hero{padding:44px 0 36px}}
+</style>
+</head>
+<body>
+
+<div id="thanks">
+  <div class="box">
+    <h2>Thank you for your purchase! 🎉</h2>
+    <p>Your payment of ₹99 was successful.</p>
+    <p>Payment ID: <code id="pid"></code></p>
+    <div id="deliver" style="margin-top:20px"></div>
+    <p style="font-size:13px;margin-top:20px">Please save your Payment ID. Questions? Email <a class="ct" href="mailto:rajusingh505150518@gmail.com">rajusingh505150518@gmail.com</a></p>
+  </div>
+</div>
+
+<div class="main">
+<nav>
+  <div class="logo"><i></i>Web Free</div>
+  <div class="links"><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="btn" href="#plan" style="color:#fff;margin-right:0">Buy now</a></div>
+</nav>
+
+<header class="hero w">
+  <div class="eyebrow">Instant delivery · One-time ₹99</div>
+  <h1>Get your professional website for just ₹99</h1>
+  <p>Pay once, securely, and receive your finished website right away. No subscription and no hidden charges.</p>
+  <button class="btn buy" type="button">Buy now · ₹99</button>
+  <div class="note">Secure payment via UPI, cards and net banking (Razorpay)</div>
+</header>
+
+<section class="soft"><div class="w">
+  <h2>Why choose Web Free</h2>
+  <p class="sub">Simple, affordable and ready when you are.</p>
+  <div class="grid">
+    <div class="card"><h3>Pocket-friendly price</h3><p>One small payment of ₹99 gives you a professionally built website.</p></div>
+    <div class="card"><h3>Instant delivery</h3><p>Receive your finished website right after payment.</p></div>
+    <div class="card"><h3>Secure payment</h3><p>Pay safely through trusted Indian payment options.</p></div>
+    <div class="card"><h3>Professionally built</h3><p>Designed by us so you get a polished website, ready to use.</p></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="w">
+  <h2>How it works</h2>
+  <p class="sub">Three quick steps from purchase to your website.</p>
+  <div class="grid">
+    <div class="card"><div class="num">1</div><h3>Choose the plan</h3><p>Tap Buy now on the ₹99 website plan.</p></div>
+    <div class="card"><div class="num">2</div><h3>Pay securely</h3><p>Complete the payment with UPI, card or net banking via Razorpay.</p></div>
+    <div class="card"><div class="num">3</div><h3>Get your website</h3><p>After payment you will see your access details right on the screen.</p></div>
+  </div>
+</div></section>
+
+<section class="soft"><div class="w">
+  <h2>What’s included</h2>
+  <p class="sub">Everything in the ₹99 plan.</p>
+  <div class="grid">
+    <div class="card"><h3>One professionally built website</h3><p>A clean, modern, mobile-friendly layout to present your business with credibility.</p><span class="tag">Ready to use</span></div>
+    <div class="card"><h3>Instant delivery after payment</h3><p>Your access details appear as soon as your ₹99 payment is confirmed.</p><span class="tag">Immediate access</span></div>
+    <div class="card"><h3>No subscription or renewal</h3><p>Pay ₹99 once per website. No recurring charges and no lock-in.</p><span class="tag">One-time ₹99</span></div>
+    <div class="card"><h3>Secure Indian payments</h3><p>Pay with UPI (GPay, PhonePe, Paytm), debit or credit cards, or net banking.</p><span class="tag">Razorpay</span></div>
+  </div>
+</div></section>
+
+<section id="plan"><div class="w">
+  <div class="plan">
+    <div class="eyebrow">Professional Website Plan</div>
+    <div class="price">₹99 <small>/ one-time payment</small></div>
+    <ul>
+      <li>One professionally built website</li>
+      <li>Instant delivery after payment</li>
+      <li>No subscription or renewal</li>
+      <li>Checkout via Razorpay (UPI, cards, net banking)</li>
+    </ul>
+    <button class="btn buy" type="button" style="width:100%">Buy now</button>
+    <div class="note">🔒 One-time payment · Secure Razorpay checkout</div>
+  </div>
+</div></section>
+
+<section class="soft" id="faq"><div class="w">
+  <h2>Frequently asked questions</h2>
+  <p class="sub">Quick answers before you buy.</p>
+  <details open><summary>What do I get after paying?</summary><p>You receive access to your professionally built website right after your payment is confirmed. The ₹99 fee covers this one website.</p></details>
+  <details><summary>Is it a one-time payment?</summary><p>Yes. The ₹99 plan is a single payment per website, with no renewals or recurring charges.</p></details>
+  <details><summary>Which payment methods are accepted?</summary><p>UPI, cards and net banking through Razorpay.</p></details>
+  <details><summary>Does ₹99 cover hosting or a domain name?</summary><p>No. The ₹99 fee covers the design and delivery of your website. Hosting and a domain, if you need them, are separate and not included.</p></details>
+  <details><summary>What if I face a problem?</summary><p>Email us at <a class="ct" href="mailto:rajusingh505150518@gmail.com">rajusingh505150518@gmail.com</a> with your Payment ID and we will help you.</p></details>
+</div></section>
+
+<section><div class="w">
+  <div class="cta">
+    <h2>Ready to get started?</h2>
+    <p>Get your professional website with a single ₹99 payment.</p>
+    <button class="btn white buy" type="button">Buy now</button>
+  </div>
+</div></section>
+
+<section class="soft" id="policies"><div class="w">
+  <h2>Policies</h2><p class="sub">Please read before buying.</p>
+  <details><summary>Refund policy</summary><p>This is a digital product and cannot be returned after delivery. If something is wrong or you cannot get access, email us and we will fix it. If we cannot deliver your website, we will refund your payment.</p></details>
+  <details><summary>Privacy policy</summary><p>We only use the details you give at checkout (such as name, email and phone) to process your payment and deliver your website. Payments are handled by Razorpay. We do not sell your information.</p></details>
+  <details><summary>Terms of service</summary><p>The ₹99 plan covers one website. Hosting and domain are not included. By paying you agree to these terms and the policies above.</p></details>
+  <details><summary>Contact</summary><p>Email: <a class="ct" href="mailto:rajusingh505150518@gmail.com">rajusingh505150518@gmail.com</a></p></details>
+</div></section>
+
+<footer>
+  <div class="logo" style="justify-content:center;margin-bottom:10px"><i></i>Web Free</div>
+  <p>© <span id="yr"></span> Web Free. All rights reserved.</p>
+  <p>Contact: <a class="ct" href="mailto:rajusingh505150518@gmail.com">rajusingh505150518@gmail.com</a></p>
+</footer>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+// ===== SETTINGS YOU CAN EDIT =====
+var RAZORPAY_KEY_ID = "rzp_live_TryPYupcEM15ow"; // public key ID only. Never put your Key Secret here.
+var DELIVERY_URL = ""; // paste the link to your website/product here (Google Drive, etc.). Leave empty to use the email option.
+var CONTACT_EMAIL = "rajusingh505150518@gmail.com";
+// =================================
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+function showThanks(paymentId){
+  document.getElementById("pid").textContent = paymentId;
+  var d = document.getElementById("deliver");
+  if (DELIVERY_URL) {
+    d.innerHTML = '<a class="btn" target="_blank" rel="noopener" href="' + DELIVERY_URL + '">Get my website</a>';
+  } else {
+    var subject = encodeURIComponent("Website delivery - Payment ID " + paymentId);
+    var body = encodeURIComponent("Hello, I paid ₹99. My Payment ID is " + paymentId + ". Please send my website.");
+    d.innerHTML = '<p>To receive your website, tap the button below to email us your Payment ID. We will send it to you.</p><a class="btn" href="mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body + '">Email us my Payment ID</a>';
+  }
+  document.body.className = "paid";
+  window.scrollTo(0, 0);
+}
+
+function startPayment(btn){
+  if (typeof Razorpay === "undefined") { alert("The payment system is still loading. Please check your internet and try again."); return; }
+  var options = {
+    key: RAZORPAY_KEY_ID,
+    amount: 9900,
+    currency: "INR",
+    name: "Web Free",
+    description: "Professional Website Plan (one-time ₹99)",
+    theme: { color: "#4f46e5" },
+    handler: function(res){ showThanks(res.razorpay_payment_id); },
+    modal: { ondismiss: function(){} }
+  };
+  try { new Razorpay(options).open(); } catch (e) { alert("Could not open the payment window. Please try again."); }
+}
+
+Array.prototype.forEach.call(document.querySelectorAll(".buy"), function(b){
+  b.addEventListener("click", function(){ startPayment(b); });
+});
+</script>
+</body>
+</html>
