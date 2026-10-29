@@ -134,6 +134,7 @@ section{padding:100px 0;scroll-margin-top:80px}
 .stat b{display:block;font-family:var(--head);font-size:28px;font-weight:800;color:var(--orange);line-height:1.2}
 .stat span{font-size:13px;color:var(--mut)}
 .about-art{background:var(--beige);border-radius:20px;padding:34px;position:relative}
+.about-art video{display:block;width:100%;aspect-ratio:520 / 380;object-fit:cover;border-radius:14px}
 .about-art::before{content:"";position:absolute;inset:auto -16px -16px auto;width:120px;height:120px;border:3px solid var(--orange);border-radius:20px;z-index:-1}
 
 /* How it works (video-intro styled band) */
@@ -479,24 +480,10 @@ body.paid .totop{display:none}
   <section class="about" id="about">
     <div class="w">
       <div class="about-art rv">
-        <svg viewBox="0 0 520 380" role="img" aria-label="Illustration of a website layout in a browser window">
-          <rect x="0" y="0" width="520" height="380" rx="14" fill="#fff"></rect>
-          <rect x="0" y="0" width="520" height="44" rx="14" fill="#1D1D1F"></rect>
-          <rect x="0" y="30" width="520" height="14" fill="#1D1D1F"></rect>
-          <circle cx="24" cy="22" r="6" fill="#FF7A45"></circle><circle cx="44" cy="22" r="6" fill="#EADDC8"></circle><circle cx="64" cy="22" r="6" fill="#6B6B70"></circle>
-          <rect x="96" y="14" width="260" height="16" rx="8" fill="#3a3a3e"></rect>
-          <rect x="28" y="70" width="70" height="12" rx="6" fill="#FF7A45"></rect>
-          <rect x="300" y="70" width="40" height="10" rx="5" fill="#E9E3DA"></rect><rect x="350" y="70" width="40" height="10" rx="5" fill="#E9E3DA"></rect><rect x="400" y="70" width="40" height="10" rx="5" fill="#E9E3DA"></rect><rect x="450" y="66" width="44" height="18" rx="4" fill="#1D1D1F"></rect>
-          <rect x="28" y="120" width="230" height="22" rx="5" fill="#1D1D1F"></rect>
-          <rect x="28" y="152" width="190" height="22" rx="5" fill="#1D1D1F"></rect>
-          <rect x="28" y="190" width="210" height="9" rx="4" fill="#d9d2c7"></rect><rect x="28" y="206" width="170" height="9" rx="4" fill="#d9d2c7"></rect>
-          <rect x="28" y="232" width="100" height="32" rx="5" fill="#FF7A45"></rect>
-          <rect x="290" y="108" width="204" height="160" rx="10" fill="#EADDC8"></rect>
-          <circle cx="392" cy="188" r="46" fill="#FF7A45"></circle>
-          <rect x="350" y="176" width="84" height="24" rx="4" fill="#fff" fill-opacity=".9"></rect>
-          <rect x="28" y="296" width="146" height="58" rx="8" fill="#F8F3EC"></rect><rect x="187" y="296" width="146" height="58" rx="8" fill="#F8F3EC"></rect><rect x="346" y="296" width="148" height="58" rx="8" fill="#F8F3EC"></rect>
-          <circle cx="54" cy="325" r="12" fill="#FFE9DF"></circle><circle cx="213" cy="325" r="12" fill="#FFE9DF"></circle><circle cx="372" cy="325" r="12" fill="#FFE9DF"></circle>
-        </svg>
+        <video controls autoplay muted loop playsinline preload="metadata" aria-label="Web Free website preview">
+          <source src="Website%20page%20video.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
       </div>
       <div class="rv">
         <div class="eyebrow">About Web Free</div>
