@@ -181,6 +181,7 @@ section{padding:100px 0;scroll-margin-top:80px}
 .why{background:var(--cream)}
 .why .w{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:center}
 .why-art{border-radius:20px;overflow:hidden;background:var(--ink);position:relative}
+.why-art video{display:block;width:100%;aspect-ratio:520 / 440;object-fit:cover}
 .why-art .cap{position:absolute;left:22px;bottom:22px;right:22px;background:rgba(255,255,255,.95);border-radius:12px;padding:14px 18px;font-family:var(--head);font-weight:700;font-size:15px;display:flex;align-items:center;gap:12px}
 .why-art .cap i{width:10px;height:10px;border-radius:50%;background:#2BB673;flex:none;box-shadow:0 0 0 4px rgba(43,182,115,.18)}
 .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 34px;margin-top:36px}
@@ -651,22 +652,10 @@ body.paid .totop{display:none}
   <section class="why" id="why">
     <div class="w">
       <div class="why-art rv">
-        <svg viewBox="0 0 520 440" role="img" aria-label="Illustration of a designer's workspace with a monitor showing a website">
-          <rect width="520" height="440" fill="#2A2A2D"></rect>
-          <circle cx="430" cy="80" r="120" fill="#FF7A45" fill-opacity=".12"></circle>
-          <rect x="90" y="70" width="340" height="220" rx="14" fill="#1D1D1F" stroke="#3a3a3e" stroke-width="2"></rect>
-          <rect x="104" y="84" width="312" height="192" rx="6" fill="#F8F3EC"></rect>
-          <rect x="120" y="100" width="56" height="10" rx="5" fill="#FF7A45"></rect>
-          <rect x="120" y="130" width="140" height="16" rx="4" fill="#1D1D1F"></rect><rect x="120" y="152" width="110" height="16" rx="4" fill="#1D1D1F"></rect>
-          <rect x="120" y="180" width="120" height="8" rx="4" fill="#d9d2c7"></rect><rect x="120" y="194" width="96" height="8" rx="4" fill="#d9d2c7"></rect>
-          <rect x="120" y="216" width="70" height="24" rx="4" fill="#FF7A45"></rect>
-          <rect x="286" y="118" width="114" height="130" rx="8" fill="#EADDC8"></rect>
-          <path d="M300 230l30-40 22 26 14-16 24 30z" fill="#FF7A45"></path>
-          <circle cx="370" cy="150" r="12" fill="#fff"></circle>
-          <rect x="240" y="290" width="40" height="40" fill="#1D1D1F"></rect>
-          <rect x="190" y="328" width="140" height="10" rx="5" fill="#1D1D1F"></rect>
-          <rect x="60" y="360" width="400" height="14" rx="7" fill="#3a3a3e"></rect>
-        </svg>
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Web Free design preview">
+          <source src="Down%20page%20video.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
         <div class="cap"><i></i>Working on your website design</div>
       </div>
       <div class="rv">
