@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -164,20 +165,10 @@ section{padding:100px 0;scroll-margin-top:80px}
 .prod .tag{display:inline-block;align-self:flex-start;margin-top:16px;font-family:var(--head);font-size:13px;font-weight:700;color:var(--ink);border-bottom:2px solid var(--orange);padding-bottom:2px}
 
 /* Plan */
-.plan-banner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding:clamp(28px,5vw,64px);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:linear-gradient(135deg,#fff 0%,var(--cream) 100%)}
-.plan-banner-copy .eyebrow{margin-bottom:18px}
-.plan-banner-copy h2{max-width:580px;font-size:clamp(30px,4.2vw,48px);font-weight:800}
-.plan-banner-copy h2 em{font-style:normal;color:var(--orange)}
-.plan-banner-copy>p{max-width:560px;margin-top:16px;color:var(--mut);font-size:17px}
-.plan-banner-points{display:grid;gap:10px;margin:24px 0 28px;padding:0;list-style:none}
-.plan-banner-points li{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:15px}
-.plan-banner-points li::before{content:"✓";display:grid;place-items:center;flex:none;width:22px;height:22px;border-radius:50%;background:var(--orange-soft);color:var(--orange);font-weight:800}
-.plan-banner-visual{min-height:300px;display:grid;place-items:center;position:relative;border-radius:16px;background:var(--beige);overflow:hidden}
-.plan-banner-visual::before,.plan-banner-visual::after{content:"";position:absolute;border:1px solid rgba(29,29,31,.15);border-radius:50%;width:280px;height:280px}
-.plan-banner-visual::after{width:360px;height:360px}
-.plan-price-card{position:relative;z-index:1;min-width:210px;padding:30px 34px;border-radius:16px;background:#fff;box-shadow:var(--shadow);text-align:center}
-.plan-price-card strong{display:block;color:var(--orange);font-family:var(--head);font-size:clamp(50px,7vw,72px);font-weight:800;line-height:1.1}
-.plan-price-card span{display:block;margin-top:8px;color:var(--mut);font-family:var(--head);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.plan-banner{position:relative;max-width:1180px;margin:0 auto;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:var(--cream)}
+.plan-banner-image{display:block;width:100%;height:auto}
+.plan-banner-buy{position:absolute;left:10.4%;top:83.3%;width:79.1%;height:9.5%;padding:0;border:0;border-radius:999px;background:transparent;cursor:pointer}
+.plan-banner-buy:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 
 /* Why choose */
 .why{background:var(--cream)}
@@ -265,8 +256,8 @@ body.paid .main{display:none}
 .comparison-badge.bad{color:#ff3b30;border:3px solid #ff3b30}
 .comparison-badge.bad::before,.comparison-badge.bad::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:3px;background:currentColor;border-radius:999px;transform:translate(-50%,-50%) rotate(45deg)}
 .comparison-badge.bad::after{transform:translate(-50%,-50%) rotate(-45deg)}
-.comparison-badge.good{color:#29b864;border:3px solid #29b864}
-.comparison-badge.good::before{content:"";position:absolute;left:6px;top:9px;width:9px;height:4px;border-left:4px solid currentColor;border-bottom:4px solid currentColor;transform:rotate(-45deg)}
+.comparison-badge.good{width:42px;height:42px;border:0;border-radius:9px;color:#fff;background:linear-gradient(145deg,#35e879 0%,#00ad42 72%);box-shadow:0 3px 7px rgba(0,125,48,.28),inset 0 1px 2px rgba(255,255,255,.65)}
+.comparison-badge.good::before{content:"";position:absolute;left:12px;top:13px;width:17px;height:9px;border-left:4px solid currentColor;border-bottom:4px solid currentColor;transform:rotate(-45deg)}
 .comparison-panel-body{padding:18px 18px 0}
 .comparison-brand{position:relative;display:flex;align-items:center;justify-content:center;min-height:182px;border-radius:18px;background:#f3f1ef;overflow:hidden}
 .comparison-panel--bad .comparison-brand{background:#f4f1ef}
@@ -296,8 +287,8 @@ body.paid .main{display:none}
 .comparison-list li .bad{color:#ff3b30}
 .comparison-list li .bad::before,.comparison-list li .bad::after{content:"";position:absolute;width:18px;height:4px;background:currentColor;border-radius:999px;transform:rotate(45deg)}
 .comparison-list li .bad::after{transform:rotate(-45deg)}
-.comparison-list li .good{color:#1ebd62}
-.comparison-list li .good::before{content:"";position:absolute;left:7px;top:11px;width:9px;height:4px;border-left:4px solid currentColor;border-bottom:4px solid currentColor;transform:rotate(-45deg)}
+.comparison-list li .good{color:#fff;background:linear-gradient(145deg,#7ce18c 0%,#31ac4b 78%);box-shadow:0 2px 6px rgba(40,150,64,.28),inset 0 1px 2px rgba(255,255,255,.48)}
+.comparison-list li .good::before{content:"";position:absolute;left:8px;top:9px;width:10px;height:6px;border-left:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(-45deg)}
 .comparison-total{margin-top:24px;padding:18px 20px;border-radius:12px;display:flex;align-items:center;justify-content:center;letter-spacing:-.06em;font-family:var(--head);font-size:clamp(15px,1.35vw,28px);font-weight:900;line-height:1.25;text-transform:uppercase}
 .comparison-total.dark{background:#2f2f34;color:#fff}
 .comparison-total.light{background:#f3b099;color:#1d1d1f}
@@ -315,6 +306,8 @@ body.paid .main{display:none}
   .reviews{padding-top:18px;padding-bottom:42px}
   .comparison-title{margin-bottom:18px;line-height:1.15}
   .comparison-panel-body{padding:20px 18px 0}
+  .comparison-badge.good{width:34px;height:34px}
+  .comparison-badge.good::before{left:10px;top:10px;width:14px;height:8px}
   .comparison-brand{min-height:120px}
   .safe-box{width:170px;height:90px}
   .safe-arrow{font-size:40px;width:40px;height:52px}
@@ -375,8 +368,6 @@ body.paid .totop{display:none}
   .stat{padding:14px 8px}
   .stat b{font-size:22px}
   .hero .acts .btn{flex:1 1 100%}
-  .plan-banner{grid-template-columns:1fr;gap:24px;padding:24px}
-  .plan-banner-visual{min-height:220px}
   .hero-badge{left:0;bottom:6px;padding:10px 14px}
   .hero-badge .p{font-size:20px}
   .review-invite{padding:30px 22px}
@@ -679,20 +670,8 @@ window.setTimeout(function(){
   <section id="plan" style="padding-top:0">
     <div class="w">
       <div class="plan-banner rv">
-        <div class="plan-banner-copy">
-          <div class="eyebrow">Simple pricing</div>
-          <h2>Get your professional website for <em>₹99</em></h2>
-          <p>One website, one simple payment. No subscription or renewal fees.</p>
-          <ul class="plan-banner-points">
-            <li>One professionally built website</li>
-            <li>Delivery instructions after payment confirmation</li>
-            <li>Secure checkout through Razorpay</li>
-          </ul>
-          <button class="btn buy" type="button" aria-label="Buy the ₹99 website plan">Buy now · ₹99</button>
-        </div>
-        <div class="plan-banner-visual" aria-hidden="true">
-          <div class="plan-price-card"><strong>₹99</strong><span>One-time payment</span></div>
-        </div>
+        <img class="plan-banner-image" src="Website%20Plan%20Banner.png" alt="Professional website plan for a one-time ₹99 payment, with instant delivery and no subscription or renewal.">
+        <button class="plan-banner-buy buy" type="button" aria-label="Buy the ₹99 website plan"></button>
       </div>
     </div>
   </section>
