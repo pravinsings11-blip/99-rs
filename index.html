@@ -932,11 +932,23 @@ function showThanks(paymentId){
   window.scrollTo(0, 0);
 }
 
-// Keep the thank-you screen (and Payment ID) if the page is refreshed in the same tab
-try {
-  var savedId = sessionStorage.getItem("wf_payment_id");
-  if (savedId) showThanks(savedId);
-} catch (e) {}
+var paymentReturnParams = new URLSearchParams(window.location.search);
+var returnedPaymentId = paymentReturnParams.get("razorpay_payment_id");
+var returnedPaymentStatus = paymentReturnParams.get("razorpay_payment_link_status");
+if (returnedPaymentStatus) {
+  if (returnedPaymentId && returnedPaymentStatus === "paid") {
+    showThanks(returnedPaymentId);
+  } else {
+    try { sessionStorage.removeItem("wf_payment_id"); } catch (e) {}
+  }
+  window.history.replaceState(null, document.title, window.location.pathname + window.location.hash);
+} else {
+  // Keep the thank-you screen (and Payment ID) if the page is refreshed in the same tab
+  try {
+    var savedId = sessionStorage.getItem("wf_payment_id");
+    if (savedId) showThanks(savedId);
+  } catch (e) {}
+}
 
 document.getElementById("backHome").addEventListener("click", function(e){
   e.preventDefault();
