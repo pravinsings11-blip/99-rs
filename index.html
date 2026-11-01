@@ -97,8 +97,8 @@ section{padding:100px 0;scroll-margin-top:80px}
 .hero .note{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--mut);margin-top:22px}
 .hero .note svg{width:16px;height:16px;color:var(--orange);flex:none}
 .hero-art{position:relative}
-.hero-art video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;box-shadow:0 24px 64px rgba(34,24,90,.16);transform-origin:center;animation:hero-float 6s ease-in-out infinite}
-@keyframes hero-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(-.5deg)}}
+.hero-art img{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 24px 64px rgba(34,24,31,.16);animation:hero-float 6s ease-in-out infinite}
+@keyframes hero-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .hero-badge{position:absolute;left:-10px;bottom:24px;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:14px 18px;display:flex;align-items:center;gap:12px}
 .hero-badge .p{font-family:var(--head);font-weight:800;font-size:26px;color:var(--orange);line-height:1}
 .hero-badge small{display:block;font-size:12px;color:var(--mut);line-height:1.4}
@@ -155,8 +155,8 @@ section{padding:100px 0;scroll-margin-top:80px}
 .prod{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .prod:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .prod .thumb{aspect-ratio:4/3;background:var(--beige);position:relative;overflow:hidden}
-.prod .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.prod:hover .thumb img{transform:scale(1.06)}
+.prod .thumb svg{width:100%;height:100%;transition:transform .5s}
+.prod:hover .thumb svg{transform:scale(1.06)}
 .prod .badge{position:absolute;top:14px;left:14px;background:var(--orange);color:#fff;font-family:var(--head);font-weight:700;font-size:12px;padding:4px 12px;border-radius:30px}
 .prod .body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
 .prod .cat{font-size:12.5px;color:var(--orange);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
@@ -247,7 +247,7 @@ body.paid .main{display:none}
 .reviews .w{max-width:1200px}
 .comparison-title{max-width:1120px;margin:0 auto 28px;font-family:var(--head);font-size:clamp(28px,2.9vw,54px);line-height:1.08;font-weight:800;letter-spacing:-.06em;text-transform:uppercase;color:var(--ink)}
 .comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;max-width:1190px;margin:0 auto}
-.comparison-panel{display:flex;flex-direction:column;background:#f8f4f0;border:1px solid rgba(29,29,31,.15);border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(28,29,31,.05)}
+.comparison-panel{background:#f8f4f0;border:1px solid rgba(29,29,31,.15);border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(28,28,31,.05)}
 .comparison-panel-header{display:flex;align-items:center;gap:14px;min-height:80px;padding:18px 20px 16px;font-family:var(--head);font-weight:800;letter-spacing:-.05em;line-height:1.08}
 .comparison-panel-header.dark{background:#2f2f34;color:#fff;font-size:clamp(17px,1.7vw,34px)}
 .comparison-panel-header.light{background:#f7f4f2;color:var(--ink);font-size:clamp(15px,1.5vw,28px)}
@@ -258,7 +258,7 @@ body.paid .main{display:none}
 .comparison-badge.bad::after{transform:translate(-50%,-50%) rotate(-45deg)}
 .comparison-badge.good{width:42px;height:42px;border:0;border-radius:9px;color:#fff;background:linear-gradient(145deg,#35e879 0%,#00ad42 72%);box-shadow:0 3px 7px rgba(0,125,48,.28),inset 0 1px 2px rgba(255,255,255,.65)}
 .comparison-badge.good::before{content:"";position:absolute;left:12px;top:13px;width:17px;height:9px;border-left:4px solid currentColor;border-bottom:4px solid currentColor;transform:rotate(-45deg)}
-.comparison-panel-body{display:flex;flex:1;flex-direction:column;padding:18px}
+.comparison-panel-body{padding:18px 18px 0}
 .comparison-brand{position:relative;display:flex;align-items:center;justify-content:center;min-height:182px;border-radius:18px;background:#f3f1ef;overflow:hidden}
 .comparison-panel--bad .comparison-brand{background:#f4f1ef}
 .comparison-panel--good .comparison-brand{background:#f3f3f2}
@@ -289,9 +289,7 @@ body.paid .main{display:none}
 .comparison-list li .bad::after{transform:rotate(-45deg)}
 .comparison-list li .good{color:#fff;background:linear-gradient(145deg,#7ce18c 0%,#31ac4b 78%);box-shadow:0 2px 6px rgba(40,150,64,.28),inset 0 1px 2px rgba(255,255,255,.48)}
 .comparison-list li .good::before{content:"";position:absolute;left:8px;top:9px;width:10px;height:6px;border-left:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(-45deg)}
-.comparison-total{min-height:88px;margin-top:auto;padding:16px 20px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-align:center;letter-spacing:-.03em;font-family:var(--head);line-height:1.2;text-transform:uppercase}
-.comparison-total-label{font-size:12px;font-weight:700;letter-spacing:.1em;opacity:.76}
-.comparison-total strong{font-size:clamp(17px,1.55vw,24px);font-weight:900}
+.comparison-total{margin-top:24px;padding:18px 20px;border-radius:12px;display:flex;align-items:center;justify-content:center;letter-spacing:-.06em;font-family:var(--head);font-size:clamp(15px,1.35vw,28px);font-weight:900;line-height:1.25;text-transform:uppercase}
 .comparison-total.dark{background:#2f2f34;color:#fff}
 .comparison-total.light{background:#f3b099;color:#1d1d1f}
 .comparison-cta{display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1190px;margin:30px auto 0;padding:0 12px}
@@ -307,7 +305,7 @@ body.paid .main{display:none}
 @media (max-width:640px){
   .reviews{padding-top:18px;padding-bottom:42px}
   .comparison-title{margin-bottom:18px;line-height:1.15}
-  .comparison-panel-body{padding:20px 18px}
+  .comparison-panel-body{padding:20px 18px 0}
   .comparison-badge.good{width:34px;height:34px}
   .comparison-badge.good::before{left:10px;top:10px;width:14px;height:8px}
   .comparison-brand{min-height:120px}
@@ -473,10 +471,7 @@ window.setTimeout(function(){
       </div>
 
       <div class="hero-art rv in">
-        <video autoplay loop muted playsinline preload="metadata" poster="website-orange.jpg" aria-label="Silent looping 3D website animation">
-          <source src="Animate_3D.mp4" type="video/mp4">
-          Your browser does not support HTML video.
-        </video>
+        <img src="hero-orange.jpg" alt="Orange website displayed on a tablet with video and learning materials">
         <div class="hero-badge">
           <div class="p">₹99</div>
           <div><b style="font-family:var(--head)">One-time</b><small>No subscription</small></div>
@@ -576,7 +571,15 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">Ready to use</span>
-            <img src="website-orange.jpg" alt="Premium responsive website design displayed on a laptop and phone in warm orange tones" loading="lazy" decoding="async">
+            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="300" height="225" fill="#EADDC8"></rect>
+              <rect x="50" y="40" width="200" height="145" rx="8" fill="#fff"></rect>
+              <rect x="50" y="40" width="200" height="18" rx="8" fill="#1D1D1F"></rect><rect x="50" y="50" width="200" height="8" fill="#1D1D1F"></rect>
+              <rect x="64" y="74" width="80" height="10" rx="3" fill="#1D1D1F"></rect><rect x="64" y="90" width="60" height="10" rx="3" fill="#1D1D1F"></rect>
+              <rect x="64" y="110" width="40" height="14" rx="3" fill="#FF7A45"></rect>
+              <rect x="160" y="70" width="76" height="60" rx="6" fill="#FF7A45"></rect>
+              <rect x="64" y="144" width="52" height="28" rx="4" fill="#F8F3EC"></rect><rect x="124" y="144" width="52" height="28" rx="4" fill="#F8F3EC"></rect><rect x="184" y="144" width="52" height="28" rx="4" fill="#F8F3EC"></rect>
+            </svg>
           </div>
           <div class="body">
             <span class="cat">Website</span>
@@ -588,7 +591,12 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">Immediate access</span>
-            <img src="delivery-orange.jpg" alt="Website delivery and instant access shown on a phone in warm orange tones" loading="lazy" decoding="async">
+            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="300" height="225" fill="#1D1D1F"></rect>
+              <circle cx="150" cy="112" r="62" fill="none" stroke="#FF7A45" stroke-width="10"></circle>
+              <path d="M150 72v42l26 16" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M230 48l-14 20h12l-4 18 16-24h-12z" fill="#FF7A45"></path>
+            </svg>
           </div>
           <div class="body">
             <span class="cat">Delivery</span>
@@ -600,7 +608,12 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">One-time ₹99</span>
-            <img src="price-orange.jpg" alt="₹99 one-time price represented by a coin and price tag in warm orange tones" loading="lazy" decoding="async">
+            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="300" height="225" fill="#FFE9DF"></rect>
+              <rect x="80" y="44" width="140" height="140" rx="14" fill="#fff"></rect>
+              <rect x="80" y="44" width="140" height="34" rx="14" fill="#FF7A45"></rect><rect x="80" y="64" width="140" height="14" fill="#FF7A45"></rect>
+              <text x="150" y="146" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="46" fill="#1D1D1F">₹99</text>
+            </svg>
           </div>
           <div class="body">
             <span class="cat">Pricing</span>
@@ -612,7 +625,13 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">Razorpay</span>
-            <img src="secure-orange.jpg" alt="Secure payment protected by a shield and lock in warm orange tones" loading="lazy" decoding="async">
+            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="300" height="225" fill="#EADDC8"></rect>
+              <rect x="60" y="58" width="180" height="112" rx="14" fill="#1D1D1F"></rect>
+              <rect x="60" y="82" width="180" height="20" fill="#FF7A45"></rect>
+              <rect x="78" y="124" width="60" height="10" rx="4" fill="#6B6B70"></rect><rect x="78" y="142" width="38" height="10" rx="4" fill="#6B6B70"></rect>
+              <circle cx="198" cy="140" r="14" fill="#FF7A45"></circle><circle cx="214" cy="140" r="14" fill="#EADDC8" fill-opacity=".8"></circle>
+            </svg>
           </div>
           <div class="body">
             <span class="cat">Payments</span>
@@ -699,10 +718,7 @@ window.setTimeout(function(){
               <li><span class="bad" aria-hidden="true"></span><span class="text">Ownership: Dependent (Rules/fees<br>can change)</span></li>
             </ul>
 
-            <div class="comparison-total dark">
-              <span class="comparison-total-label">Ongoing plan costs</span>
-              <strong>From ₹5,988 per year</strong>
-            </div>
+            <div class="comparison-total dark">Total loss: thousands per year</div>
           </div>
         </article>
 
@@ -727,17 +743,14 @@ window.setTimeout(function(){
               <li><span class="good" aria-hidden="true"></span><span class="text">Ownership: Independent Owner<br>(Full Control)</span></li>
             </ul>
 
-            <div class="comparison-total light">
-              <span class="comparison-total-label">Platform commission</span>
-              <strong>0% on your sales</strong>
-            </div>
+            <div class="comparison-total light">Total profit: 100% yours forever</div>
           </div>
         </article>
       </div>
 
       <div class="comparison-cta rv">
         <div class="comparison-cta-copy">Stop giving away your hard-earned money.<br>Build your own platform for just ₹99 once.</div>
-        <a class="comparison-cta-btn" href="https://rzp.io/rzp/R6xcczhr"><span>Buy now / get my</span><span>profile setup</span></a>
+        <a class="comparison-cta-btn" href="https://rzp.io/rzp/webfree2.0"><span>Buy now / get my</span><span>profile setup</span></a>
       </div>
     </div>
   </section>
@@ -848,8 +861,8 @@ window.setTimeout(function(){
 
 <script>
 // ===== SETTINGS YOU CAN EDIT =====
-var PAYMENT_URL = "https://rzp.io/rzp/R6xcczhr";
-var DELIVERY_URL = "https://drive.google.com/drive/folders/1UfdcJ9ye43oowPPpvCUmUjIxUmi0x3hw?usp=sharing"; // paste the link to your website/product here (Google Drive, etc.). Leave empty to use the email option.
+var PAYMENT_URL = "https://rzp.io/rzp/webfree2.0";
+var DELIVERY_URL = ""; // paste the link to your website/product here (Google Drive, etc.). Leave empty to use the email option.
 var CONTACT_EMAIL = "rajusingh505150518@gmail.com";
 // =================================
 
@@ -932,23 +945,11 @@ function showThanks(paymentId){
   window.scrollTo(0, 0);
 }
 
-var paymentReturnParams = new URLSearchParams(window.location.search);
-var returnedPaymentId = paymentReturnParams.get("razorpay_payment_id");
-var returnedPaymentStatus = paymentReturnParams.get("razorpay_payment_link_status");
-if (returnedPaymentStatus) {
-  if (returnedPaymentId && returnedPaymentStatus === "paid") {
-    showThanks(returnedPaymentId);
-  } else {
-    try { sessionStorage.removeItem("wf_payment_id"); } catch (e) {}
-  }
-  window.history.replaceState(null, document.title, window.location.pathname + window.location.hash);
-} else {
-  // Keep the thank-you screen (and Payment ID) if the page is refreshed in the same tab
-  try {
-    var savedId = sessionStorage.getItem("wf_payment_id");
-    if (savedId) showThanks(savedId);
-  } catch (e) {}
-}
+// Keep the thank-you screen (and Payment ID) if the page is refreshed in the same tab
+try {
+  var savedId = sessionStorage.getItem("wf_payment_id");
+  if (savedId) showThanks(savedId);
+} catch (e) {}
 
 document.getElementById("backHome").addEventListener("click", function(e){
   e.preventDefault();
