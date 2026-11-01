@@ -155,8 +155,8 @@ section{padding:100px 0;scroll-margin-top:80px}
 .prod{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .prod:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .prod .thumb{aspect-ratio:4/3;background:var(--beige);position:relative;overflow:hidden}
-.prod .thumb svg{width:100%;height:100%;transition:transform .5s}
-.prod:hover .thumb svg{transform:scale(1.06)}
+.prod .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.prod:hover .thumb img{transform:scale(1.06)}
 .prod .badge{position:absolute;top:14px;left:14px;background:var(--orange);color:#fff;font-family:var(--head);font-weight:700;font-size:12px;padding:4px 12px;border-radius:30px}
 .prod .body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
 .prod .cat{font-size:12.5px;color:var(--orange);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
@@ -471,7 +471,7 @@ window.setTimeout(function(){
       </div>
 
       <div class="hero-art rv in">
-        <img src="hero-orange.jpg" alt="Orange website displayed on a tablet with video and learning materials">
+        <img src="website.jpg" alt="Website design displayed on a laptop and phone in warm orange tones">
         <div class="hero-badge">
           <div class="p">₹99</div>
           <div><b style="font-family:var(--head)">One-time</b><small>No subscription</small></div>
@@ -571,15 +571,7 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">Ready to use</span>
-            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect width="300" height="225" fill="#EADDC8"></rect>
-              <rect x="50" y="40" width="200" height="145" rx="8" fill="#fff"></rect>
-              <rect x="50" y="40" width="200" height="18" rx="8" fill="#1D1D1F"></rect><rect x="50" y="50" width="200" height="8" fill="#1D1D1F"></rect>
-              <rect x="64" y="74" width="80" height="10" rx="3" fill="#1D1D1F"></rect><rect x="64" y="90" width="60" height="10" rx="3" fill="#1D1D1F"></rect>
-              <rect x="64" y="110" width="40" height="14" rx="3" fill="#FF7A45"></rect>
-              <rect x="160" y="70" width="76" height="60" rx="6" fill="#FF7A45"></rect>
-              <rect x="64" y="144" width="52" height="28" rx="4" fill="#F8F3EC"></rect><rect x="124" y="144" width="52" height="28" rx="4" fill="#F8F3EC"></rect><rect x="184" y="144" width="52" height="28" rx="4" fill="#F8F3EC"></rect>
-            </svg>
+            <img src="website.jpg" alt="Premium website displayed on a laptop and phone" loading="lazy" decoding="async">
           </div>
           <div class="body">
             <span class="cat">Website</span>
@@ -591,12 +583,7 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">Immediate access</span>
-            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect width="300" height="225" fill="#1D1D1F"></rect>
-              <circle cx="150" cy="112" r="62" fill="none" stroke="#FF7A45" stroke-width="10"></circle>
-              <path d="M150 72v42l26 16" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M230 48l-14 20h12l-4 18 16-24h-12z" fill="#FF7A45"></path>
-            </svg>
+            <img src="delivery.jpg" alt="Website delivery and instant access shown on a phone" loading="lazy" decoding="async">
           </div>
           <div class="body">
             <span class="cat">Delivery</span>
@@ -608,12 +595,7 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">One-time ₹99</span>
-            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect width="300" height="225" fill="#FFE9DF"></rect>
-              <rect x="80" y="44" width="140" height="140" rx="14" fill="#fff"></rect>
-              <rect x="80" y="44" width="140" height="34" rx="14" fill="#FF7A45"></rect><rect x="80" y="64" width="140" height="14" fill="#FF7A45"></rect>
-              <text x="150" y="146" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="46" fill="#1D1D1F">₹99</text>
-            </svg>
+            <img src="price.jpg" alt="₹99 one-time price represented by a coin and price tag" loading="lazy" decoding="async">
           </div>
           <div class="body">
             <span class="cat">Pricing</span>
@@ -625,13 +607,7 @@ window.setTimeout(function(){
         <article class="prod rv">
           <div class="thumb">
             <span class="badge">Razorpay</span>
-            <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <rect width="300" height="225" fill="#EADDC8"></rect>
-              <rect x="60" y="58" width="180" height="112" rx="14" fill="#1D1D1F"></rect>
-              <rect x="60" y="82" width="180" height="20" fill="#FF7A45"></rect>
-              <rect x="78" y="124" width="60" height="10" rx="4" fill="#6B6B70"></rect><rect x="78" y="142" width="38" height="10" rx="4" fill="#6B6B70"></rect>
-              <circle cx="198" cy="140" r="14" fill="#FF7A45"></circle><circle cx="214" cy="140" r="14" fill="#EADDC8" fill-opacity=".8"></circle>
-            </svg>
+            <img src="secure.jpg" alt="Secure payment protected by a shield and lock" loading="lazy" decoding="async">
           </div>
           <div class="body">
             <span class="cat">Payments</span>
